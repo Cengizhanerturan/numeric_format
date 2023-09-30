@@ -40,19 +40,19 @@ NumeralParsedValue numeralParser(num value) {
 
   // If number > 1 trillion.
   if (abs >= 1000000000000) {
-    return NumeralParsedValue(value: value / 1000000000000, suffix: 'Tn');
+    return NumeralParsedValue(value: value / 1000000000000, suffix: ' Tn');
 
     // If number > 1 billion.
   } else if (abs >= 1000000000) {
-    return NumeralParsedValue(value: value / 1000000000, suffix: 'Mr');
+    return NumeralParsedValue(value: value / 1000000000, suffix: ' Mr');
 
     // If number > 1 million.
   } else if (abs >= 1000000) {
-    return NumeralParsedValue(value: value / 1000000, suffix: 'Mn');
+    return NumeralParsedValue(value: value / 1000000, suffix: ' Mn');
 
     // If number > 1 thousand.
   } else if (abs >= 10000) {
-    return NumeralParsedValue(value: value / 1000, suffix: 'B');
+    return NumeralParsedValue(value: value / 1000, suffix: ' B');
   }
 
   return NumeralParsedValue(value: value, suffix: '');
