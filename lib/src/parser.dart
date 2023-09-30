@@ -52,7 +52,7 @@ NumeralParsedValue numeralParser(num value) {
 
     // If number > 10 thousand.
   } else if (abs >= 10000) {
-    return NumeralParsedValue(value: value / 10000, suffix: 'B');
+    return NumeralParsedValue(value: value / 1000, suffix: 'B');
   }
 
   return NumeralParsedValue(value: value, suffix: '');
