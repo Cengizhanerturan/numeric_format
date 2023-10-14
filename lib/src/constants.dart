@@ -1,2 +1,2 @@
 /// Default fraction digits value.
-const int DEFAULT_FRACTION_DIGITS = 3;
+const int DEFAULT_FRACTION_DIGITS = 0;
