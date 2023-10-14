@@ -12,5 +12,10 @@ import 'src/numeral.dart';
 /// ```dart
 /// numeral(10000) // => 10K
 /// ```
-String numeral(num value, {int fractionDigits = DEFAULT_FRACTION_DIGITS}) =>
-    Numeral(value).format(fractionDigits: fractionDigits);
+String numeral(num value, {int fractionDigits = DEFAULT_FRACTION_DIGITS}) {
+  if (value.toString().length >= 7) {
+    return Numeral(value).format(fractionDigits: 1);
+  } else {
+    return Numeral(value).format(fractionDigits: fractionDigits);
+  }
+}
